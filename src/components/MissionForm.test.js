@@ -40,4 +40,6 @@ test('calls getData when the button is pressed', ()=>{
     //Assert
     expect(fakeGetData.mock.calls.length).toBe(1);
     expect(fakeGetData.mock.calls).toHaveLength(1);
+    expect(fakeGetData).toHaveBeenCalled();
+    expect(fakeGetData).toHaveBeenCalledTimes(1);
 });
