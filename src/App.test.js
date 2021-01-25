@@ -3,7 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from './App';
 
-import mockFetchMissions from './api/fetchMissions';
+import {fetchMissions as mockFetchMissions} from './api/fetchMissions';
 jest.mock('./api/fetchMissions');
 
 test('Renders without errors', ()=> {
@@ -12,7 +12,10 @@ test('Renders without errors', ()=> {
 
 test('Renders mission data when button is clicked', async ()=> {
     mockFetchMissions.mockResolvedValueOnce({
-        data:
+        data:[
+            {mission_name:"Mission 1", mission_id:"mission 1"},
+            {mission_name:"Mission 2", mission_id:"mission 2"}
+        ]
     });
 
     //Arrange: render app
