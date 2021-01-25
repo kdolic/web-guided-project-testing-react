@@ -20,9 +20,9 @@ test('Renders message when isFetchingData is true', ()=> {
     expect(item).toBeInTheDocument();
 });
 
-// test('renders the button on the isFetchingData is false', ()=>{
+test('renders the button on the isFetchingData is false', ()=>{
 
-// });
+});
 
 // test('calls getData when the button is pressed', ()=>{
 
