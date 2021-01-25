@@ -11,6 +11,10 @@ test('Renders without errors', ()=> {
 });
 
 test('Renders mission data when button is clicked', async ()=> {
+    mockFetchMissions.mockResolvedValueOnce({
+        
+    });
+
     //Arrange: render app
     render(<App />);
 
