@@ -9,7 +9,10 @@ test("MissionForm renders without errors", ()=>{
 });
 
 test('renders message when isFetchingData is true', ()=> {
+    //Arrange: Show MissionForm with isFetchingData = true
+    render(<Missionform isFetchingData={true}/>);
 
+    //Act:
 });
 
 test('renders the button on the isFetchingData is false', ()=>{
