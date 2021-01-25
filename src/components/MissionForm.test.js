@@ -8,12 +8,12 @@ test("MissionForm renders without errors", ()=>{
     render(<MissionForm/>);
 });
 
-test('renders message when isFetchingData is true', ()=> {
+test('Renders message when isFetchingData is true', ()=> {
     //Arrange: Show MissionForm with isFetchingData = true
     render(<MissionForm isFetchingData={true}/>);
 
     //Act: Query for text 'we are fetching data'
-    const item = screen.getByText(/we are fetching data/i);
+    const item = screen.queryByText(/we are not fetching data/i);
 
     //Assert: 'we are fetching data' exists on the page.
 });
