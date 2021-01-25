@@ -28,12 +28,12 @@ test('Renders the button on the isFetchingData is false', ()=>{
 
 test('calls getData when the button is pressed', ()=>{
     const fakeGetData = jest.fn(()=> {
-        return("this is fake data");
+        return([{title:1}, {title:1}, {title:1}]);
     });
 
     //Arrange
     render(<MissionForm isFetchingData={false} getData={()=>{
-        fakeGetData("this is fake arg");
+        fakeGetData("this is fake arg", 1);
     }}/>);
 
     //Act:
