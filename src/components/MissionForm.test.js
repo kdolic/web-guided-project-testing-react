@@ -37,4 +37,5 @@ test('calls getData when the button is pressed', ()=>{
     userEvent.click(button);
 
     //Assert
+    console.log(fakeGetData);
 });
