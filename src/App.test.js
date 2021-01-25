@@ -7,8 +7,10 @@ test('Renders without errors', ()=> {
     render(<App/>);
 });
 
-test('Renders mission data when button is clicked', ()=> {
+test('Renders mission data when button is clicked', async ()=> {
     //Arrange: render app
+    render(<App />);
+    
     //Act: get data from api? and push button
     //Assert: We should get the same amount of missions as our api returned.
 });
