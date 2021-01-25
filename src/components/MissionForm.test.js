@@ -32,7 +32,9 @@ test('calls getData when the button is pressed', ()=>{
     });
 
     //Arrange
-    render(<MissionForm isFetchingData={false} getData={fakeGetData}/>);
+    render(<MissionForm isFetchingData={false} getData={()=>{
+        fakeGetData("this is fake arg");
+    }}/>);
 
     //Act:
     const button = screen.getByRole('button');
