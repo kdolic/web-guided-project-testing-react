@@ -21,7 +21,7 @@ test('Renders message when isFetchingData is true', ()=> {
 });
 
 test('renders the button on the isFetchingData is false', ()=>{
-
+    
 });
 
 // test('calls getData when the button is pressed', ()=>{
