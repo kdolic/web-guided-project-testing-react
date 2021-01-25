@@ -14,7 +14,7 @@ test('Renders mission data when button is clicked', async ()=> {
     //Act: get data from api? and push button
     const button = screen.getByRole('button');
     userEvent.click(button);
-
+    
     //Assert: We should get the same amount of missions as our api returned.
-    expect(screen.)
+    expect(screen.getAllByTestId('mission')).toHaveLength(10);
 });
