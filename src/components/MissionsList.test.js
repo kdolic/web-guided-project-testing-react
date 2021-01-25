@@ -16,5 +16,7 @@ const missions = [
 ];
 
 test('renders without errors', ()=>{
-    render(<MissionsList missions={missions}/>);
+    render(<MissionsList missions={[]}/>);
 });
+
+test('renders ')
