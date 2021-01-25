@@ -19,4 +19,6 @@ test('renders without errors', ()=>{
     render(<MissionsList missions={[]}/>);
 });
 
-test('renders ')
+test('renders change in missions list correctly', ()=>{
+    render(<MissionsList missions={[]});
+});
