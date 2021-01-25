@@ -26,7 +26,7 @@ test('renders change in missions list correctly', ()=>{
     expect(missionObjects).toStrictEqual([]);
     expect(missionObjects).toHaveLength(0);
 
-    rerender(<MissionsList mission={missions}/>);
+    rerender(<MissionsList missions={missions}/>);
     missionObjects = screen.queryAllByTestId('mission');
     expect(missionObjects).toHaveLength(2);
 });
