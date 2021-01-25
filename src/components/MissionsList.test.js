@@ -20,9 +20,13 @@ test('renders without errors', ()=>{
 });
 
 test('renders change in missions list correctly', ()=>{
-    render(<MissionsList missions={[]}/>);
+    const { rerender } = render(<MissionsList missions={[]}/>);
 
     let missionObjects = screen.queryAllByTestId('mission');
     expect(missionObjects).toStrictEqual([]);
     expect(missionObjects).toHaveLength(0);
+
+    rerender(<MissionList mission={missions}/>);
+
+
 });
