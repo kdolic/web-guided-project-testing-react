@@ -13,9 +13,10 @@ test('Renders message when isFetchingData is true', ()=> {
     render(<MissionForm isFetchingData={true}/>);
 
     //Act: Query for text 'we are fetching data'
-    const item = screen.queryByText(/we are not fetching data/i);
+    const item = screen.queryByText(/we are fetching data/i);
 
     //Assert: 'we are fetching data' exists on the page.
+    expect(item).not.toBeNull();
 });
 
 // test('renders the button on the isFetchingData is false', ()=>{
