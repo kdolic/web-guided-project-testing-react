@@ -35,7 +35,9 @@ test('calls getData when the button is pressed', ()=>{
     //Act:
     const button = screen.getByRole('button');
     userEvent.click(button);
+    userEvent.click(button);
 
     //Assert
-    console.log(fakeGetData.mock);
+    console.log(fakeGetData.mock.calls.length);
+    expect(fakeGetData.mock.calls.length).toBe(1);
 });
