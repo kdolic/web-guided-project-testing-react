@@ -7,3 +7,6 @@ test('Renders without errors', ()=> {
     render(<App/>);
 });
 
+test('Renders mission data when button is clicked', ()=> {
+    
+});
