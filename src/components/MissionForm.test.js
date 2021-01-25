@@ -10,15 +10,18 @@ test("MissionForm renders without errors", ()=>{
 
 test('renders message when isFetchingData is true', ()=> {
     //Arrange: Show MissionForm with isFetchingData = true
-    render(<Missionform isFetchingData={true}/>);
+    render(<MissionForm isFetchingData={true}/>);
 
-    //Act:
+    //Act: Query for text 'we are fetching data'
+    const item = screen.getByText(/we are fetching data/i);
+
+    //Assert: 'we are fetching data' exists on the page.
 });
 
-test('renders the button on the isFetchingData is false', ()=>{
+// test('renders the button on the isFetchingData is false', ()=>{
 
-});
+// });
 
-test('calls getData when the button is pressed', ()=>{
+// test('calls getData when the button is pressed', ()=>{
 
-});
+// });
